@@ -1,0 +1,175 @@
+:root {
+  --main-color: #2196f3;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main.game {
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+.game .game-name {
+  width: 100%;
+  background-color: var(--main-color);
+  font-size: 1.3rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+  user-select: none;
+}
+
+.game .game-container {
+  width: 80%;
+  margin: 10px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-container .game-message {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.game-container .game-message span {
+  font-weight: bold;
+  color: brown;
+}
+
+.game-container .game-start-btn {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+  background-color: #219683;
+  color: #fff;
+  text-transform: capitalize;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  transition: 0.2s;
+}
+
+.game-container .game-start-btn:hover {
+  background-color: var(--main-color);
+}
+
+.game-container input#game-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #219683;
+}
+
+.game-container input#game-input:focus {
+  outline: 2px solid var(--main-color);
+  border-color: transparent;
+}
+
+.game-container input#game-input::placeholder {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.game-container .game-upcoming-words {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.game-container .game-upcoming-words span {
+  padding: 5px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.game-container section.game-statics {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+
+.game-container section.game-statics span {
+  font-weight: bold;
+  color: brown;
+}
+
+.game-container .game-end-message {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.game-container .game-end-message.good {
+  color: var(--main-color);
+}
+
+.game-container .game-end-message.slow {
+  color: #ff0000;
+}
+
+.game-container .game-levels-container {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+  user-select: none;
+}
+.game-container .game-levels-container label {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.game-levels-container select#game-levels {
+  width: 20%;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid #219683;
+}
+
+.game-levels-container select#game-levels:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.game-word {
+  font-size: 2rem;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+  z-index: -33333;
+}
